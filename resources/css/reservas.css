@@ -1,0 +1,172 @@
+/* Estilos para el titulo */
+.titulo {
+    color: #fff;
+    font-size: 1em; 
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block; /* Asegura que el título se ajuste al contenido y permita centrarlo */
+    margin-top: 60px;
+}
+
+/* Estilos generales para h2 */
+h2 {
+    z-index: 998;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+/* Estilos para el enfoque visual */
+:focus-visible {
+    outline: #2696E9 auto 1px;
+}
+
+/* Estilos del body */
+body {
+    background-image: url("../img/reservas.png"); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+/* Estilos del formulario */
+form {
+    width: 90%;
+    max-width: 700px;
+    margin-top: 100px; /* Espacio superior para el formulario */
+    /*z-index: 2;*/
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-top: 55px; /* Espacio extra arriba para el legend */
+    background-color: #fff;
+    padding-left: 39px;
+}
+
+legend {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #2696E9; 
+    position: absolute;
+    top: 16px; 
+    left: 39px; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos de los campos de entrada */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+/* Estilos para agrupar nombre y apellidos */
+.cliente .row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cliente .row input {
+    width: calc(50% - 10px); /* Asegura que los campos sean del mismo tamaño */
+}
+
+/* Estilo para los botones de ratio */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilo para el area del texto */
+textarea {
+    resize: vertical;
+}
+
+/* Estilos del boton de envio */
+input[type="submit"] {
+    background-color: #2696E9; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff; 
+    color: #2696E9; 
+    border: 2px solid #2696E9; 
+}
+
+/* Estilos para los campos de datos */
+.cliente {
+    margin-bottom: 10px;
+}
+
+/* Media queries (responsive) */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.5em;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select {
+        font-size: 0.9em; 
+    }
+
+    /* Se apilan los campos */
+    .cliente .row {
+        flex-direction: column; 
+    }
+
+    .cliente .row input {
+        width: 100%; 
+    }  
+}
+
+/* Ajustes adicionales */
+@media (max-width: 1040px) {
+    h2 {
+        padding: 12px 20px;
+    }
+}

@@ -1,0 +1,141 @@
+/* Estilos del body */
+h2 .titulo {
+    color: #fff;
+    font-size: 1em; 
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block; /* Asegura que el título se ajuste al contenido y permita centrarlo */
+    margin-top: 60px;
+}
+
+h2 {
+    z-index: 998;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Fondo de pantalla completo y responsive */
+    background-image: url('../img/galeria.png'); 
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    position: relative; /* Posiciona el pseudo-elemento */
+}
+
+
+
+/* Contenedor del carrusel */
+.swiper.mySwiper.container {
+    width: 80%; 
+    overflow: hidden; /* Asegura que el border-radius se aplique correctamente */
+    border-radius: 10px; /* Aplica border-radius al contenedor del carrusel */
+}
+
+/* Wrapper que contiene las diapositivas */
+.swiper-wrapper {
+    display: flex;
+}
+
+/* Diapositiva individual */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Posicionamiento del texto */
+    border-radius: 10px;
+    box-shadow: 5px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Asegura que las imágenes no se desborden */
+    width: 100%; 
+    margin-bottom: 30px;
+}
+
+/* Imágenes dentro de las diapositivas */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste para que la imagen mantenga proporciones */
+    border-radius: 10px; /* Aplica border-radius a las imágenes */
+}
+
+/* Texto de cada imagen */
+.swiper-txt {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    z-index: 2; 
+    text-align: left;
+}
+
+.swiper-txt h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #fff; 
+}
+
+.swiper-txt p {
+    font-size: 16px;
+    color: #fff; 
+}
+
+/* Flechas de navegacion */
+.swiper-button-next,
+.swiper-button-prev {
+    z-index: 3; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.435); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Asegura que parezca interactivo */
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 24px;
+    font-weight: 900;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.929); 
+}
+
+/* Media queries (responsive) */
+@media (max-width: 991px) {
+    .swiper-container {
+        width: 100%; 
+        padding: 0 20px; 
+    }
+
+    .swiper-slide {
+        width: 100%; 
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto; 
+    }
+}
+
+@media (max-width: 1040px) {
+    h2 {
+        padding: 12px 20px;
+    }
+}
